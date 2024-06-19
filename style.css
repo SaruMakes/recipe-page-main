@@ -1,5 +1,4 @@
-
-/*Custom Color Variables*/
+/* Custom Color Variables */
 
 :root {
   --nutmeg: hsl(14, 45%, 36%);
@@ -10,56 +9,33 @@
   --light-grey: hsl(30, 18%, 87%);
   --wenge-brown: hsl(30, 10%, 34%);
   --dark-charcoal: hsl(24, 5%, 18%);
-
-  --shadow-color: hsl(32deg 21% 72%);
-  --shadow-elevation-low:
-    0px 0.2px 0.3px hsl(var(--shadow-color) / 0),
-    0px 0.3px 0.5px hsl(var(--shadow-color) / 0.11),
-    0px 0.5px 0.8px hsl(var(--shadow-color) / 0.22);
-
-  --shadow-elevation-medium:
-    0px 0.2px 0.3px hsl(var(--shadow-color) / 0),
-    0px 0.5px 0.8px hsl(var(--shadow-color) / 0.06),
-    0px 0.9px 1.4px hsl(var(--shadow-color) / 0.11),
-    0px 1.5px 2.3px hsl(var(--shadow-color) / 0.17),
-    0px 2.5px 3.8px hsl(var(--shadow-color) / 0.22);
-
-    --shadow-elevation-high:
-    0px 0.2px 0.3px hsl(var(--shadow-color) / 0),
-    0px 0.8px 1.2px hsl(var(--shadow-color) / 0.03),
-    0px 1.3px 2px hsl(var(--shadow-color) / 0.05),
-    0px 1.8px 2.7px hsl(var(--shadow-color) / 0.08),
-    0px 2.4px 3.6px hsl(var(--shadow-color) / 0.1),
-    0px 3px 4.5px hsl(var(--shadow-color) / 0.13),
-    0px 3.9px 5.9px hsl(var(--shadow-color) / 0.16),
-    0px 5px 7.5px hsl(var(--shadow-color) / 0.18),
-    0.1px 6.4px 9.6px hsl(var(--shadow-color) / 0.21),
-    0.1px 8.2px 12.3px hsl(var(--shadow-color) / 0.23);
 }
 
-/*Typography*/
+/* Typography */
 
 body p {
   font-size: 1rem;
   font-family: outfit;
 }
 
-/*Desktop*/
+/* Desktop */
 
 body {
   background-color: var(--eggshell);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7.6875rem;
+  
 }
 
 main {
-  position: relative;
-  margin: 0 auto;
-  top: 7.6875rem;
+  display: flex;
   flex-direction: column;
   padding: 2.5rem;
   max-width: 46rem;
   background-color: var(--white);
   border-radius: 1.25rem;
-  box-shadow: var(--shadow-elevation-high);
 }
 
 main img {
@@ -73,7 +49,7 @@ main h1 {
   color: var(--dark-charcoal);
   margin: 0 0 0.75rem;
   font-size: 2.5rem;
-  line-height: 2.5rem;
+  line-height: 1;
   margin-bottom: 1.75rem;
 }
 
@@ -83,12 +59,13 @@ main p {
   margin-bottom: 2rem;
 }
 
-/*Preparation Time section*/
+/* Preparation Time section */
 
 main .preptime-list {
   background-color: var(--rose-white);
   padding: 1.5rem;
   border-radius: 0.75rem;
+  margin-bottom: 2.125rem;
 }
 
 main .preptime-list h2 {
@@ -106,7 +83,8 @@ main .preptime-list ul li {
   margin: 1rem 0;
 }
 
-main .preptime-list li, b {
+main .preptime-list li,
+b {
   font-family: outfit;
   color: var(--dark-charcoal);
   margin-left: 1rem;
@@ -117,18 +95,136 @@ main .preptime-list li p {
   color: var(--dark-charcoal);
 }
 
+/* Ingredients Section */
 
-/*Ingredients Section*/
+main .ingredients-list {
+  margin-bottom: 1.875rem;
+}
 
+main .ingredients-list h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  color: var(--nutmeg);
+  font-size: 1.875rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
 
+main .ingredients-list ul {
+  list-style: none;
+  padding-left: 0.5rem;
+}
+
+main .ingredients-list li {
+  color: var(--nutmeg);
+  line-height: 2;
+}
+
+main .ingredients-list li::before {
+  content: "\25CF"; /* Unicode character for a circle */
+  color: var(--nutmeg);
+  font-size: 0.7rem; /* Smaller font size for bullet */
+  line-height: 2rem; /* Matches line-height of <li> */
+  margin-right: 1.8rem;
+}
+
+main .ingredients-list li p {
+  font-size: 1rem;
+  color: var(--dark-charcoal);
+  display: inline;
+  line-height: 2;
+}
+
+/* Instructions section */
+
+main hr {
+  margin-bottom: 2.375rem;
+}
+
+main .instructions-list h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  color: var(--nutmeg);
+  font-size: 1.875rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+main .instructions-list ol {
+  font-family: Outfit;
+  font-weight: 700;
+  color: var(--nutmeg);
+  padding-left: 1.5rem;
+  margin-bottom: 2.125rem;
+}
+
+main .instructions-list li {
+  margin-bottom: 0.9375rem;
+  padding-left: 1rem;
+}
+
+main .instructions-list li span {
+  font-weight: 400;
+  color: var(--dark-charcoal);
+  line-height: 1.5rem;
+}
+
+main .instructions-list li span.bold {
+  font-weight: 700;
+}
+
+main hr {
+  margin-bottom: 2.125rem;
+}
+
+/*Nutrition Section*/
+
+.nutrition-table {
+
+}
+
+.nutrition-table h2 {
+  font-size: 1.875rem;
+  font-family: "Young Serif";
+  font-weight: 400;
+  color: var(--nutmeg);
+}
+
+.nutrition-table caption {
+  font-family: "Outfit";
+  text-align: start;
+}
+
+.nutrition-table table {
+  table-layout: fixed;
+  font-family: "Outfit";
+  color: var(--dark-charcoal);
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid purple;
+}
+
+.nutrition-table tr {
+  border-bottom: 1px var(--light-grey);
+}
+
+.nutrition-table th {
+  font-weight: 400;
+  text-align: start;
+}
+
+.nutrition-table td {
+  font-weight: 700;
+  color: var(--nutmeg);
+  text-align: start;
+}
 
 
 /*Attribution Section*/
 
+/*
 footer {
-  display: none;
-  position: relative;
-  bottom: 0;
+  
 }
 
 footer .attribution {

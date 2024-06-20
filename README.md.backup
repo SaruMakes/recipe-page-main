@@ -14,23 +14,12 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
 ### Screenshot
 
 ![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
@@ -44,13 +33,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### Initial thoughts
 
@@ -60,51 +42,24 @@ After having studied HTML semantics more, I've decided to opt not to include a h
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project turned out to be far more challenging than I had originally anticipated. There were lots of little elements, which didn't react the way I expected them to, once I started trying to recreate the mobile version of the site, with the desktop version as a starting point.
 
-To see how you can add code snippets, see below:
+For example, I learned that styling the bulletpoints/numbers of lists was more complicated than I thought. Not that I didn't come up with a solution for it, but especially making sure that the bullet points center vertically with a multi-line `<li>` was a good bit more tricky than I thought it would've been.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+I ended up solving this issue, by removing the bullet point entirely and then adding it back in with `content: "\25CF";`. This allowed me to style it like any other text element, and together with some flexbox properties, I was able to make it work.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I also learned a lot about semantic HTML, and found myself redoing certain sections a bunch of times, to ensure that I didn't just have a solution, but that I had a solution that is hopefully fairly accessible.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I ended up not using CSS Grid for the project, so that is something I would very much like to use on the next project I work on, if it makes sense. I'm feeling fairly comfortable with Flexbox at this point, so I'd like to push myself out of my comfort zone on this.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I'm quite proud of my growing understanding of specificity when it comes to CSS, but I would like to still keep improving. Additionally, I'd love to start learning how to create CSS that's more DRY or optimized in general. Ideally I want my code to be easy to read and easy to maintain, both for me and others.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [WebAIM HTML Semantics Cheat Sheet](https://webaim.org/resources/htmlcheatsheet/HTML%20Semantics%20and%20Accessibility%20Cheat%20Sheet.pdf) - I found this .pdf from WebAIM to be very informative, and helped me understand how to work with Semantic HTML and how assistive technologies might interact with various HTML elements.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@SaruMakes](https://www.frontendmentor.io/profile/sarumakes)

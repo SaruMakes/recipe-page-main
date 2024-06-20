@@ -18,16 +18,21 @@ body p {
   font-family: outfit;
 }
 
-/* Desktop */
-
 body {
   background-color: var(--eggshell);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 7.6875rem;
-  
 }
+
+@media screen and (max-width: 432px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+/*Main Setup*/
 
 main {
   display: flex;
@@ -59,11 +64,26 @@ main p {
   margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 432px) {
+  main {
+    padding: 0;
+  }
+
+  main h1 {
+    margin: 0 2rem 1.375rem;
+    font-size: 2.375rem;
+  }
+
+  main p {
+    margin: 0 2rem 2rem;
+  }
+}
+
 /* Preparation Time section */
 
 main .preptime-list {
   background-color: var(--rose-white);
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 0.75rem;
   margin-bottom: 2.125rem;
 }
@@ -77,22 +97,58 @@ main .preptime-list h2 {
   margin-bottom: 1.3125rem;
 }
 
-main .preptime-list ul li {
-  color: var(--dark-raspberry);
-  line-height: 1rem;
-  margin: 1rem 0;
+main .preptime-list ul {
+  padding-left: 0.5rem;
 }
 
-main .preptime-list li,
-b {
+main .preptime-list li {
   font-family: outfit;
-  color: var(--dark-charcoal);
+  color: var(--dark-raspberry);
+  line-height: 1rem;
   margin-left: 1rem;
 }
 
+main .preptime-list li .bold {
+  font-weight: 700;
+}
+
 main .preptime-list li p {
-  display: inline;
-  color: var(--dark-charcoal);
+  margin: 0 0 1rem;
+}
+
+@media screen and (max-width: 432px) {
+  main .preptime-list {
+    margin: 0 2rem 2rem;
+    padding: 1.625rem;
+  }
+
+  main .preptime-list ul {
+    padding-left: 0;
+  }
+
+  main .preptime-list ul li {
+    display: flex;
+    align-items: center;
+    margin-left: 0.35rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  main .preptime-list ul li:last-of-type {
+    margin-bottom: 0;
+  }
+
+  main .preptime-list ul li::before {
+    /*Replacing the standard bullet point, to allow for vertical centering to the <li> text content*/
+    content: "●";
+    margin-right: 1.375rem;
+    font-size: 0.75rem;
+    line-height: inherit;
+  }
+
+  main .preptime-list li p {
+    margin-bottom: 0;
+  }
 }
 
 /* Ingredients Section */
@@ -135,6 +191,35 @@ main .ingredients-list li p {
   line-height: 2;
 }
 
+@media screen and (max-width: 432px) {
+  main .ingredients-list {
+    margin: 0 2rem 2.125rem;
+  }
+
+  main .ingredients-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  main .ingredients-list li:last-of-type {
+    margin-bottom: 0;
+  }
+
+  main .ingredients-list li::before {
+    margin-right: 0;
+  }
+
+  main .ingredients-list li p {
+    margin: 0 0 0 1.75rem;
+    line-height: 1.25;
+  }
+
+  main hr {
+    margin: 0 2rem 2.125rem;
+  }
+}
+
 /* Instructions section */
 
 main hr {
@@ -156,6 +241,7 @@ main .instructions-list ol {
   color: var(--nutmeg);
   padding-left: 1.5rem;
   margin-bottom: 2.125rem;
+  line-height: 1;
 }
 
 main .instructions-list li {
@@ -163,14 +249,21 @@ main .instructions-list li {
   padding-left: 1rem;
 }
 
-main .instructions-list li span {
+main .instructions-list li p {
   font-weight: 400;
   color: var(--dark-charcoal);
   line-height: 1.5rem;
+  margin-bottom: 0;
 }
 
-main .instructions-list li span.bold {
+main .instructions-list li p .bold {
   font-weight: 700;
+}
+
+@media screen and (max-width: 432px) {
+  main .instructions-list {
+    margin: 0 2rem;
+  }
 }
 
 main hr {
@@ -179,33 +272,37 @@ main hr {
 
 /*Nutrition Section*/
 
-.nutrition-table {
-
-}
-
 .nutrition-table h2 {
   font-size: 1.875rem;
   font-family: "Young Serif";
   font-weight: 400;
   color: var(--nutmeg);
+  line-height: 1;
+  margin-bottom: 2rem;
 }
 
 .nutrition-table caption {
   font-family: "Outfit";
   text-align: start;
+  line-height: 1;
+  margin-bottom: 2rem;
 }
 
 .nutrition-table table {
   table-layout: fixed;
   font-family: "Outfit";
+  line-height: 2.5rem;
   color: var(--dark-charcoal);
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid purple;
 }
 
 .nutrition-table tr {
-  border-bottom: 1px var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.nutrition-table tr:last-of-type {
+  border-bottom: none;
 }
 
 .nutrition-table th {
@@ -219,17 +316,26 @@ main hr {
   text-align: start;
 }
 
+@media screen and (max-width: 432px) {
+  .nutrition-table {
+    margin: 0 2rem 2rem;
+  }
+
+  .nutrition-table caption {
+    margin-bottom: 1.171875rem;
+  }
+}
 
 /*Attribution Section*/
 
-/*
-footer {
-  
+body footer {
+  margin-top: 7.6875rem;
 }
 
 footer .attribution {
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
+  font-family: outfit;
 }
 
 footer .attribution a {

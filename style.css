@@ -116,6 +116,10 @@ main .preptime-list li p {
   margin: 0 0 1rem;
 }
 
+main .preptime-list li p:last-child {
+  margin: 0 0 0rem;
+}
+
 @media screen and (max-width: 432px) {
   main .preptime-list {
     margin: 0 2rem 2rem;

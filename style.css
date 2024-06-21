@@ -64,6 +64,10 @@ main p {
   margin-bottom: 2rem;
 }
 
+main hr {
+  border: 1px solid var(--light-grey);
+}
+
 @media screen and (max-width: 432px) {
   main {
     padding: 0;
@@ -106,18 +110,20 @@ main .preptime-list li {
   color: var(--dark-raspberry);
   line-height: 1rem;
   margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+main .preptime-list li:last-child {
+  margin-bottom: 0;
 }
 
 main .preptime-list li .bold {
   font-weight: 700;
+  
 }
 
-main .preptime-list li p {
-  margin: 0 0 1rem;
-}
-
-main .preptime-list li p:last-child {
-  margin: 0 0 0rem;
+main .preptime-list ul li p {
+  margin: 0rem;
 }
 
 @media screen and (max-width: 432px) {
